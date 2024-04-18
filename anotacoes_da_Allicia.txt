@@ -1,0 +1,13 @@
+✍(◔◡◔) ANOTAÇÕES 
+
+- quando você faz uma requisição pelo formulário, automaticamente atualiza a página
+
+- se não especificar, o método vai ser GET
+
+- data:JSON.stringify(dados)   = transforma em JSON
+
+- AJAX significa Asynchronous JavaScript and XML, ou JavaScript e XML Assíncronos. Ele é um conjunto de técnicas de desenvolvimento voltado para a web que permite que aplicações trabalhem de modo assíncrono, processando qualquer requisição ao servidor em segundo plano.
+
+- Uma API é responsável pela comunicação e troca de informações de maneira fácil e segura entre sistemas com linguagens de programação distintas.
+
+- Códigos: 200s significa que deu certo. 400s, 500s significam um erro diferente

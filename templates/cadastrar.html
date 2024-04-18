@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+</head>
+<body>
+    <h3 id="resposta"></h3>
+    <form action="/cadastrar" method = "POST">
+        <label for="name">Nome</label>
+        <input type="text" id="nome" name="nome">
+        <label for="telefone">Telefone</label>
+        <input name="telefone" type="text">
+        <label for="password">Senha</label>
+        <input name="senha" type="password">
+        <button id="bt_cadastrar" onclick="envia_cadastro()" type="submit" value="Cadastrar">Cadastrar</button>
+    </form>
+</body>
+
+<script type="text/javascript"> //guarda tudo em uma variável e envia informações para cadastrar
+    function envia_cadastro(){
+        var dados = {
+            name:$("#nome").val(),
+            telefone: $("#telefone").val(),
+            senha: $("#senha").val(),
+        }
+
+        $.ajax({          //envia
+            url:"/cadastrar_via_ajax",
+            type: "POST",
+            data:JSON.stringify(dados),   //transforma em JSON
+            contentType: "application/json",  //tipo de dado que está mandando
+            success: function(){
+                $("#resposta").append("CADASTRO REALIZADO COM SUCESSO ")
+
+            },
+            // error: function(){
+            //     $("#resposta").append("ERRO AO CADASTRAR")
+            // }
+        }
+
+        )
+
+    }
+</script>
+</html>
